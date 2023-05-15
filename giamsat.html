@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giám sát</title>
+    <!-- MATERIAL CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style_gs.css">
+    <link rel="stylesheet" type="text/css" href="LED_Indicated.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logoctu.png">
+                    <h2> GROUP 14 <span class="danger">IOT</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="giamsat.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Trang giám sát dữ liệu</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">home</span>
+                    <h3> Trang chủ</h3>
+                </a>
+                <a href="thanhvien.html">
+                    <span class="material-icons-sharp">diversity_3</span>
+                    <h3> Thành viên</h3>
+                </a>
+                <a href="lienhe.html">
+                    <span class="material-icons-sharp">contact_phone</span>
+                    <h3> Liên hệ</h3>
+                </a>         
+            </div>    
+        </aside>
+        <!-- =======================end of aside======================== -->
+        <main>
+            <h1>BIỂU DIỄN THÔNG SỐ NỒNG ĐỘ NO và CO<sub>2</sub> TẠI 2 ĐỊA ĐIỂM</h1>
+            <div class="insights1">
+                <div class="graphBox1">
+                   <div id="warning-light-1">         
+                        <table>
+                                <tr><h2>Trạng thái</h2></tr>
+                                <tr>
+                                    <td colspan=2><h2>Trạm 1</h2></td>
+                                    <td colspan=2><h2>Trạm 2</h2></td>
+                                </tr>
+                                <tr>
+                                    <td width="300px"><h2>CO<sub>2</sub></h2></td>
+                                    <td width="300px"><h2>NO</h2></td>
+                                    <td width="300px"><h2>CO<sub>2</sub></h2></td>
+                                    <td width="300px"><h2>NO</h2></td>    
+                                </tr>
+                                <tr>
+                                    <td align="center"><div id="warning_co2_1" class="bulb"></div></td>
+                                    <td align="center"><div id="warning_no_1" class="bulb"></div></td>
+                                    <td align="center"><div id="warning_co2_2" class="bulb"></div></td>
+                                    <td align="center"><div id="warning_no_2" class="bulb"></div></td>
+                                </tr>
+                         </table>
+                </div>
+
+
+            </div>
+            <div class="insights">
+                <div class="temp">
+                    <div class="middle">
+                        <div class="center">
+                            <h3 align="center">Trạm 1: Nồng độ CO<sub>2</sub></h3>
+                            <h1 id="valco2_1"></h1>
+                        </div>
+                        <div class="progress">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="graphBox">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+            <div class="insights">
+                <div class="humi">
+                    <div class="middle">
+                        <div class="left">
+                                <tr><h3>Trạm 1: Nồng độ NO</h3></tr>
+                                <tr><h1 id="valno_1"></h1></tr>
+                        </div>
+                        <div class="progress">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="graphBox">
+                    <canvas id="myChart1"></canvas>
+                </div>
+            </div>
+
+            <div class="insights">
+                <div class="wind">
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Trạm 2: Nồng độ CO<sub>2</sub></h3>
+                            <h1 id="valco2_2"></h1>
+                        </div>
+                        <div class="progress">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="graphBox">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+
+            <div class="insights">
+                <div class="gas">
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Trạm 2: Nồng độ NO</h3>
+                            <h1 id="valno_2"></h1>
+                        </div>
+                        <div class="progress">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="graphBox">
+                    <canvas id="myChart3"></canvas>
+                </div>
+            </div>
+        </main>
+        <!-- END OF MAIN -->
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>

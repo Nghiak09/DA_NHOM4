@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lien he</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- phần mở đầu trang web -->
+    <section class = "sub2-header" id="navLinks">
+        <nav>
+            <a href="https://www.ctu.edu.vn/" target="_blank"><img src="images/CTU1Logo.png"></a>
+            <div class="nav-links" >
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="thanhvien.html">THÀNH VIÊN</a></li>
+                    <li><a href="giamsat.html">QUẢN LÝ GIÁM SÁT</a></li>
+                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="contact">
+            <div class="content">
+                <h2>Liên hệ với chúng tôi</h2>
+                <p>Chúng tôi luôn lắng nghe và chia sẻ ý kiến của bạn. Ý kiến của bạn rất quan trọng để giúp đội ngũ của chúng tôi phát triển hơn về sản phẩm của chúng tôi.</p>
+                <p>Bạn có thể liên hệ với chúng tôi qua email, số điện thoại hoặc điền vào biểu mẫu của chúng tôi. Chân thành cảm ơn.</p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class='fa fa-map-marker'></i></div>
+                        <div class="textctc">
+                            <h3>Địa chỉ</h3>
+                            <p>Xuan Khanh,<br>Ninh Kieu,<br>TP Can Tho</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class='fa fa-phone-square'></i></div>
+                        <div class="textctc">
+                            <h3>Điện thoại</h3>
+                            <p>093901621</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="textctc">
+                            <h3>Email</h3>
+                            <p>nghiab1907043@student.ctu.edu.vn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form>
+                        <h2>Gửi thông tin</h2>
+                        <div class="inputBox">
+                            <input type="textctc" name="" required="required">
+                            <span>Họ và tên</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="textctc" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea required="required"></textarea>
+                            <span>Bạn muốn gửi lời nhắn gì cho chúng tôi</span>
+                        </div>
+                        <div class="inputBox1">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </section>
+
+
+    <!-- Kết thúc trang web -->
+    <section class="footer">
+        <h4>BÁO CÁO CUỐI KỲ</h4>
+        <p>KC326 Công nghệ IoT và ứng dụng</p>
+    </section>
+
+</body>
+</html>

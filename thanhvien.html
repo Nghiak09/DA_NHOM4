@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh vien</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- phần mở đầu trang web -->
+    <section class = "sub-header" id="navLinks">
+        <nav>
+            <a href="https://www.ctu.edu.vn/" target="_blank"><img src="images/CTU1Logo.png"></a>
+            <div class="nav-links" >
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="thanhvien.html">THÀNH VIÊN</a></li>
+                    <li><a href="giamsat.html">QUẢN LÝ GIÁM SÁT</a></li>
+                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Thành Viên Nhóm 14</h1>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </section>
+
+    <section class="phangioithieu">
+        <div class="frame">
+            <div class="textleft">
+                <h1 id="textleft">PHÂN CHIA CÔNG VIỆC</h1>
+            </div>
+            <div class="textright">
+                <h1>THÀNH VIÊN</h1>
+            </div>
+            <div class="phancong" id="phancong">
+                <table>
+                    <tr>
+                        <th>Nguyễn Đại Nghĩa</th>
+                        <td>Thực hiện trang chủ</td>
+                    </tr>
+                    <tr>
+                        <th>Lâm Thúy Vy</th>
+                        <td>Thực hiện trang liên hệ, hỗ trợ thực hiện trang quản lý giám sát</td>
+                    </tr>
+                    <tr>
+                        <th>Nguyễn Đăng Khoa</th>
+                        <td>Lên ý tưởng nội dung cho trang web</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="list">
+                <div class="thanhvien" id="trang" onmouseover="showprofile(0)" onmouseout="closeprofile()">
+                    <img src="images/Nghia.jpg">
+                    <h5>Nguyễn Đại Nghĩa</h5>
+                </div>
+                <div class="thanhvien" id="thanh" onmouseover="showprofile(1)" onmouseout="closeprofile()">
+                    <img src="images/Vy.jpg">
+                    <h5>Lâm Thúy Vy</h5>
+                </div>
+                <div class="thanhvien" id="y" onmouseover="showprofile(2)" onmouseout="closeprofile()">
+                    <img src="images/Khoa.jpg">
+                    <h5>Nguyễn Đăng Khoa</h5>
+                </div>
+            </div>
+            <div class="textleftt" id="textleftt">
+                <h1 class="add-titile" id="textleft">GIẢNG VIÊN HƯỚNG DẪN</h1>
+            </div>
+            <div class="phancong" id="giangvien">
+                <table>
+                    <tr>
+                        <td> <img src="images/teacher.jpg" width="150">
+                        </td>
+                        <td>
+                            <H2> <b>NGUYỄN VĂN KHANH </b></H2>
+                            <br><b>Email</b>: vankhanh@ctu.edu.vn
+                            <br><b>Trình độ chuyên môn</b>: Tiến sỹ
+                            <br><b>Đơn vị công tác:</b> BM. Tự động hóa
+                            <br> <b> PROFILE </b><a href="https://qldiem.ctu.edu.vn/htql/canbo/llkh/codes/LyLichKhoaHoc_in.php?macb=002128"  target="_blank"><i class="fas fa-address-card"></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="thongtin" id="thongtin" hidden>
+                <div class="avt">
+                    <img id="avt" src="images/Nghia.jpg">
+                    <h4 id="hoten">Nguyễn Đại Nghĩa</h4>
+                </div>
+                <div class="thongtin-text">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><i class="far fa-id-card"></i>  MSSV:</th>
+                                <td id="mssv">B1907043</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-school"></i>  Ngành:</th>
+                                <td id="nganh">Kỹ thuật cơ điện tử</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-code"></i>  Mã lớp:</th>
+                                <td id="malop">TN19S3A1</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-envelope"></i>  Email:</th>
+                                <td id="email">nghiab1907043@student.ctu.edu.vn</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-percent"></i>  Đóng góp:</th>
+                                <td id="donggop">100%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script>
+            var cnt=0;
+            function closeprofile(){
+                document.getElementById("textleft").innerHTML='PHÂN CHIA CÔNG VIỆC';
+                document.querySelector('#textleftt').hidden = false;
+                document.querySelector('#giangvien').hidden = false;
+                document.querySelector('#thongtin').hidden = true;
+                document.querySelector('#phancong').hidden = false;
+                cnt=0;
+            }
+            function showprofile(num){
+                var snd=new Audio("audio/audio1.wav");
+                snd.play();
+                document.querySelector('.textleftt').hidden = true;
+                document.querySelector('#giangvien').hidden = true;
+                document.querySelector('#thongtin').hidden = false;
+                document.querySelector('#phancong').hidden = true;
+                updateprofile(num);
+            }
+            function updateprofile(num){
+                let listavt=["images/Nghia.jpg","images/Vy.jpg","images/Khoa.jpg"];
+                let listhoten=["Nguyễn Đại Nghĩa","Lâm Thúy Vy", "Nguyễn Đăng Khoa"]
+                let listmssv=["B1907043","B2011689","B1907027",];
+                let listnganh=["Kỹ thuật cơ điện tử","Quản lý công nghiệp","Kỹ thuật cơ điện tử"];
+                let listmalop=["TN19S3A1","TN19S3A3","TN19S3A1"];
+                let listemail=["nghiab1907043@student.ctu.edu.vn",
+                                "vyb2011689@student.ctu.edu.vn",
+                                "khoab1907027@student.ctu.edu.vn",];
+                let listdonggop=["100%","100%","100%"];
+                document.getElementById("textleft").innerHTML='Thông tin sinh viên';
+                document.getElementById("avt").src=listavt[num];
+                document.getElementById("hoten").innerHTML=listhoten[num];
+                document.getElementById("mssv").innerHTML=listmssv[num];
+                document.getElementById("nganh").innerHTML=listnganh[num];
+                document.getElementById("malop").innerHTML=listmalop[num];
+                document.getElementById("email").innerHTML=listemail[num];
+                document.getElementById("donggop").innerHTML=listdonggop[num];
+            }
+        </script>
+    </section>
+
+
+    <!-- Kết thúc trang web -->
+    <section class="footer">
+        <h4>BÁO CÁO CUỐI KỲ</h4>
+        <p>KC326 Công nghệ IoT và ứng dụng</p>
+    </section>
+
+</body>
+</html>

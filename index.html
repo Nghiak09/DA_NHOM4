@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- phần mở đầu trang web -->
+    <section class = "header" id="navLinks">
+        <nav>
+            <a href="https://www.ctu.edu.vn/" target="_blank"><img src="images/CTU1Logo.png"></a>
+            <div class="nav-links" >
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="thanhvien.html">THÀNH VIÊN</a></li>
+                    <li><a href="giamsat.html">QUẢN LÝ GIÁM SÁT</a></li>
+                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box" >
+            <h1>HỆ THỐNG GIÁM SÁT MÔI TRƯỜNG TRONG THÀNH PHỐ</h1>
+            <p>Vì một môi trường XANH - SẠCH - ĐẸP</p>
+            <a href="giamsat.html" class="hero-btn">ĐẾN NGAY TRANG QUẢN LÝ GIÁM SÁT</a>
+        </div>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </section>
+
+    <section class="vande">
+        <h1>Vấn đề</h1>
+        <p>Biến đổi khí hậu đang trở thành một trong những ưu tiên hàng đầu trên toàn thế giới, khi mà tình trạng ô nhiễm môi trường và sự thay đổi khí hậu đang gây ra những tác động nghiêm trọng đến tương lai của chúng ta.</p>
+        <div class="row">
+            <div class="vande-col">
+                <h3>Thiên tai</h3>   
+                <p>Các hiện tượng thời tiết khắc nghiệt như hạn hán kéo dài, bão lũ liên tiếp ở miền Trung, rét đậm rét hại kéo dài ở miền Bắc, ngập lụt và nhiễm mặn do triều cường ở miền Nam, cùng với nhiều sự kiện khác đang xảy ra, đều là những hậu quả của biến đổi khí hậu.</p>
+            </div>
+            <!-- <div class="vande-col">
+                <h3>Ô nhiễm môi trường</h3>   
+                <p>Việc phát triển công nghiệp một cách không bền vững,
+                     dân cư sống tập trung tại các đô thị lớn, 
+                     công trường xây dựng ở khắp nơi không đảm bảo những
+                      yêu cầu cơ bản nhất về môi trường đã dẫn đến tình 
+                      trạng ô nhiễm môi trường trầm trọng</p>
+            </div> -->
+        </div>
+    </section>
+    <section class="minhhoa">
+        <div class="row">
+            <!-- Cot1 -->
+            <div class="minhhoa-col">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="images/air_population_1.jpg">
+                        <div class="text1"><h3>Khí thải từ các khu công nghiệp</h3></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="images/fire_forest_2.jpg">
+                        <div class="text1"><h3>Một đám cháy rừng lớn</h3></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="images/emision_vehicle_3.jpg">
+                        <div class="text1"><h3>Các phương tiện lưu thông đang thải khí</h3></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="images/emision_cooking_4.jpg">
+                        <div class="text1"><h3>Quá trình nấu ăn ở các hộ gia đình</h3></div>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div>
+        <script>
+            let slideIndex = 0;
+            let slideIndex1 = 0;
+            showSlides();
+            showSlides1();
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 3000); // Change image every 2 seconds
+            }
+            function showSlides1() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides1");
+              let dots = document.getElementsByClassName("dot1");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex1++;
+              if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex1-1].style.display = "block";  
+              dots[slideIndex1-1].className += " active";
+              setTimeout(showSlides1, 3500); // Change image every 2 seconds
+            }        
+        </script>
+    </section>
+    
+    <!-- Kết luận vấn đề -->
+    <section class="ketvande">
+        <h1>Kết Luận</h1>
+        <p>Tất cả những điều trên là tác nhân gây biến đổi khí hậu và ô nhiễm môi trường không khí. 
+            <br> Điều này đặt ra vấn đề kiểm soát thông số môi trường, thiết kế hệ đo giám sát chất lượng không khí
+            <br> để có những giải pháp hạn chế tác động xấu đến sức khỏe và đời sống.</p>
+    </section>
+    <!-- Phần giải quyết vấn đề -->
+    <section class="giaiquyet1">
+        <h1>Hướng giải quyết vấn đề</h1>
+        <p>Thực thi thiết kế hệ thống đo giám sát thông số môi trường thời gian thực qua web server</p>
+    </section>
+    <!-- Phần giải quyết vấn đề -->
+    <section class="ytuong">
+        <h3>Ý tưởng cho việc thu thập số liệu</h3>
+        <p>Sử dụng các cảm biến để xác định thông số môi trường ở một khu vực cần khảo sát</p>
+        <div class="row">
+            <div class="ytuong-col">
+                <img src="images/mq_135.jpg">
+                <div class="text"><h3>Cảm biến đo nồng độ <br> khí CO<sub>2</sub> và khí NO</h3></div>
+            </div>
+        </div>
+    </section>
+    <section class="ytuong">
+        <h3>Ý tưởng cho việc tổng hợp số liệu và gửi lên Server</h3>
+        <p>Sử dụng Vi điều khiển có thể đọc tín hiệu cảm biến, thực hiện tổng hợp và gửi dữ liệu lên Server thông qua internet.
+            <br>Để thuận tiện cho việc kêt nối mạng với giá thành rẻ, nhóm sử dụng ESP32 để thực hiện những công việc trên.</p>
+        <div class="row">
+            <div class="ytuong-col1">
+                <img src="images/esp32.jpg">
+                <div class="text"><h3>ESP32</h3></div>
+            </div>
+        </div>
+    </section>
+    <section class="ytuong">
+        <h3>Lưu trữ và truy cập dữ liệu trên Server</h3>
+        <p> Tạo Realtime Database để lưu trữ các trường dữ liệu nhận được từ Vi điều khiển. <br>
+            Để người dùng có thể xem được dữ liệu trên Database nhóm sẽ thực hiện thiết kế một trang web có thể truy cập vào các trường dữ liệu vừa tạo<br>
+            để lấy số liệu và hiển thị dưới dạng số hoặc biểu dồ đường hiển thị giá trị nồng độ khí CO2 và CO<sub>2</sub> theo thời gian</p>
+        <div class="row">
+            <div class="ytuong-col2">
+                <img src="images/rldatabase.png">
+                <div class="text"><h3>Các trường dữ liệu trên <br> Realtime Database</h3></div>
+            </div>
+            <div class="ytuong-col2">
+                <img src="images/bieudoduong.png">
+                <div class="text"><h3>Biểu đồ hiển thị thông số môi trường<br> theo thời gian</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="giaiquyet">
+        <h1>Mô hình toàn bộ hệ thống giám sát thông số môi trường</h1>
+        <div class="slider-frame">
+            <div class="slide-images">
+                <div class="image-container">
+                    <img src="images/Flowchart_System-Page-3.jpg">
+                    <p>ESP32 đọc số liệu từ cảm biến</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/data2Fb.png">
+                    <p>ESP32 gửi số liệu lên Realtime Database</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/compurt2FB.png">
+                    <p>Trang web lấy số liệu từ Database và hiển thị dưới dạng biểu đồ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link liên hệ -->
+    <section class="cta">
+        <h1>GROUP 14 - IoT</h1>
+        <a href="lienhe.html" class="hero-btn">LIÊN HỆ CHÚNG TÔI</a>
+    </section>
+
+    <!-- Kết thúc trang web -->
+    <section class="footer">
+        <h4>BÁO CÁO CUỐI KỲ</h4>
+        <p>KC326 Công nghệ IoT và ứng dụng</p>
+    </section>
+
+</body>
+</html>

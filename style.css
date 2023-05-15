@@ -1,0 +1,869 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* Phần mở đâu trang web */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/main_background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 200px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #36eef4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #36eef4;
+    background: #36eef4;
+    transition: 1s;
+}
+
+nav .fa{
+    display: None;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #36eef4;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/* Phần vấn đề */
+.vande{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.row{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.vande-col{
+    /*flex-basis: 48%;*/
+    flex-basis: 100%;
+    background: #d4e8f8;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.vande-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.vande-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* Phần minh họa vấn đề */
+.minhhoa{
+    width: 80%;
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 460px;
+}
+.minhhoa-col{
+    flex-basis: 48%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+.text1 {
+    background: transparent;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.text1 h3{
+    width: 100%;
+    font-weight: 300;
+    color: rgb(0, 255, 234);
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.text1:hover h3{
+    bottom: 10%;
+    opacity: 1;
+}
+
+.text {
+    background: transparent;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.text:hover{
+    background:  rgba(226, 237, 247, 0.649);
+}
+.text h3{
+    width: 100%;
+    font-weight: 500;
+    color: rgb(15, 15, 17);
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.text:hover h3{
+    bottom: 44%;
+    opacity: 1;
+}
+.numbertext {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot , .dot1{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.fade img{
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    display: block;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
+/* Phần kết luận vấn đề */
+.ketvande{
+    color: rgb(255, 251, 251);
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    background-image: linear-gradient(rgba(140, 244, 199, 0.7), rgba(25, 114, 209, 0.7)),url(images/banner1.png);
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+}
+.ketvande p{
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-weight: 300;
+}
+/* Phần giải quyết vấn đề */
+.giaiquyet1{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.giaiquyet1 p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.ytuong{
+    width:80%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background:  #e9f8d4;
+    border-radius: 50px;
+}
+.ytuong-col{
+    flex-basis: 36%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 360px;
+    margin-right: 20px;
+}
+.ytuong-col img{
+    width: 100%;
+    height: 400px;
+    margin-bottom: -4px;
+}
+.ytuong-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.ytuong-col1{
+    flex-basis: 30%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 360px;
+    margin-right: 30px;
+}
+.ytuong-col1 img{
+    width: 100%;
+    height: 280px;
+    margin-bottom: -4px;
+}
+.ytuong-col1:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.ytuong-col2{
+    flex-basis: 50%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.ytuong-col2 img{
+    width: 550px;
+    height: 280px;
+    margin-bottom: -4px;
+}
+.ytuong-col2:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+/* Mô hình hệ thống */
+.giaiquyet{
+    width:80%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background:  #f8efd4;
+    border-radius: 50px;
+}
+.slider-frame{
+    overflow: hidden;
+    height: 550px;
+    width: 900px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:900px;}
+    30% {left:900px;}
+    40% {left:900px;}
+    50% {left:1800px;}
+    60% {left:1800px;}
+    70% {left:1800px;}
+    90% {left:0px;}
+    100% {left:0px;}
+
+}
+.slide-images{
+    width: 2700px;
+    height: 600px;
+    margin: 0 0 0 -1800px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.image-container{
+    height: 600px;
+    width: 900px;
+    position: relative;
+    float: left;
+}
+.image-container img{
+    height: 500px;
+    width: 900px;
+    border-radius: 20px;
+}
+.image-container p{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* Phần Liên hệ */
+.cta{
+    margin: 100px auto;
+    width: 70%;
+    background-image: linear-gradient(rgba(131, 137, 190, 0.7), rgba(31, 96, 227, 0.7)),url(images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+}
+.footer h4{
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.footer p{
+    color: #777;
+    font-size: small;
+    margin-top: 0px;
+}
+
+.sub-header{
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(7,9,30,0.7)), url(images/background1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 35px;
+}
+
+.sub1-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(7,9,30,0.7)), url(images/background3.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub1-header h1{
+    margin-top: 35px;
+}
+.sub2-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(7,9,30,0.7)), url(images/contact_banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* trang gioi thieu thanh vien */
+.phangioithieu{
+	flex: 1;
+    background-image: linear-gradient(rgba(0, 15, 55, 0.7), rgba(142, 150, 171, 0.7)),url(images/background1.png);
+    background-position: center;
+    background-size: cover;
+}
+.frame {
+	margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+	height: 700px;
+}
+
+.frame hr {
+	float: left;
+}
+
+.thongtin {
+	background-image: linear-gradient(rgba(145, 156, 170, 0.7), rgba(74, 98, 158, 0.7));
+	border-radius: 20px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .2), 0 3px 7px rgba(0, 0, 0, .2);
+	border: 0px;
+	float: left;
+	width: 60%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.phancong {
+	background-image: linear-gradient(rgba(145, 156, 170, 0.7), rgba(74, 98, 158, 0.7));
+	border-radius: 20px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .2), 0 3px 7px rgba(0, 0, 0, .2);
+	float: left;
+	width: 60%;
+	text-align: center;
+	margin-top: 10px;
+    transition: 0.5s;
+}
+.phancong:hover{
+    box-shadow: 0 0 20px 0px rgba(234, 255, 0, 0.2);
+}
+
+.list {
+	margin-top: 10px;
+	float: right;
+	width: 35%;
+}
+
+.frame h1 {
+	text-align: center;
+	margin: 5px 0 10px 0;
+}
+
+.list h5 {
+	float: left;
+	margin: 30px 0 30px 10px;
+	text-align: left;
+}
+
+.list hr {
+	height: 0.2rem;
+	width: 100px;
+	background-color: #5758BB;
+	float: left;
+	margin: 0 80px 0;
+}
+
+.avt img {
+	border-radius: 5px;
+	width: 170px;
+	height: 170px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .2), 0 3px 7px rgba(0, 0, 0, .2);
+	transition: transform .2s;
+	margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.avt img:hover {
+	-ms-transform: scale(2);
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+
+.avt h4{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.thongtin-text table {
+	text-align: left;
+	width: 100%;
+    color: white;
+}
+
+.thongtin-text tr {
+	height: 45px;
+}
+
+.thongtin-text th {
+	width: 25%;
+	border-bottom: 1px solid #5758BB;
+    text-align: center;
+}
+
+.thongtin-text td {
+	word-wrap: break-word;
+	border-bottom: 1px solid #5758BB;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.thanhvien {
+	width: 90%;
+	margin: 5px 5% 0;
+	border-radius: 50px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .2), 0 3px 7px rgba(0, 0, 0, .2);
+	border: 1.5px solid #E9EBEE;
+	float: left;
+	transition: transform .2s;
+	background-image: linear-gradient(rgba(145, 156, 170, 0.7), rgba(74, 98, 158, 0.7))
+}
+
+.thanhvien:hover {
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+    background-image: linear-gradient(rgba(229, 192, 226, 0.7), rgba(149, 106, 144, 0.7));
+    color: white;
+}
+.thanhvien img {
+	border-radius: 50%;
+	width: 67px;
+	height: 67px;
+	float: left;
+	margin: 8px 10px 5px 30px;
+}
+.thanhvien h5{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.thanhvien {
+	cursor: pointer;
+}
+.textleft {
+	float: left;
+ 	width: 60%;
+    padding-top: 20px;
+}
+
+.textleft h1{
+    font-size: 30px;
+    text-shadow: rgb(243, 245, 116) 0px 5px 15px;
+    color: rgb(0, 255, 255);
+    text-align: center;
+}
+.textright {
+	float: right;
+ 	width: 35%; 
+    padding-top: 20px;
+}
+.textright h1{
+    font-size: 30px;
+    text-shadow: rgb(243, 245, 116) 0px 5px 15px;
+    color: rgb(0, 255, 255);
+    text-align: center;
+}
+.textleftt {
+	float: left;
+ 	width: 60%;
+    padding-top: 40px;
+}
+.textleftt h1{
+    font-size: 30px;
+    text-shadow: rgb(114, 135, 173) 0px 5px 15px;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    font-weight: 700;
+}
+
+.phancong table {
+	border-collapse: collapse;
+	margin: 10px auto;
+    color: white;
+	border: 1px solid #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+.phancong th {
+	text-align: left;
+	padding: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.phancong td{
+    text-align: left;
+	padding: 8px;
+}  
+
+
+/* Trang liên hệ  */
+.contact
+{
+    position: relative;
+    display: flex;
+    padding: 0px 120px;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: column;
+}
+.contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+.contact .content p
+{
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .textctc
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .textctc h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.container .contactInfo .box .textctc p
+{
+    margin-left: -10px;
+    font-weight: 300;
+    color: #ffffff;
+}
+.contactForm
+{
+    width: 40%;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.contactForm h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox1
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 80%;
+    padding: 5px 50px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox1 input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.vertical-center 
+{
+    max-width: 200px;
+    background: red;
+    color: white;
+    padding: 10px;
+}
+   
+
